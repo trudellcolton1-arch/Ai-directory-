@@ -98,28 +98,40 @@ export interface Database {
       categories: {
         Row: Category;
         Insert: Omit<Category, 'id' | 'created_at'>;
-        Update: Partial<Omit<Category, 'id'>>;
+        Update: Partial<Omit<Category, 'id' | 'created_at'>>;
       };
       tools: {
         Row: Tool;
         Insert: Omit<Tool, 'id' | 'created_at' | 'updated_at' | 'upvotes' | 'click_count'>;
-        Update: Partial<Omit<Tool, 'id'>>;
+        Update: Partial<Omit<Tool, 'id' | 'created_at' | 'updated_at'>>;
       };
       submissions: {
         Row: Submission;
         Insert: Omit<Submission, 'id' | 'created_at' | 'status' | 'notes'>;
-        Update: Partial<Omit<Submission, 'id'>>;
+        Update: Partial<Omit<Submission, 'id' | 'created_at'>>;
       };
       tool_clicks: {
         Row: ToolClick;
         Insert: Omit<ToolClick, 'id' | 'clicked_at'>;
-        Update: never;
+        Update: Partial<Omit<ToolClick, 'id' | 'clicked_at'>>;
       };
       featured_purchases: {
         Row: FeaturedPurchase;
         Insert: Omit<FeaturedPurchase, 'id' | 'created_at'>;
-        Update: Partial<Omit<FeaturedPurchase, 'id'>>;
+        Update: Partial<Omit<FeaturedPurchase, 'id' | 'created_at'>>;
       };
+    };
+    Views: {
+      [_ in never]: never;
+    };
+    Functions: {
+      increment_click_count: {
+        Args: { tool_id: string };
+        Returns: void;
+      };
+    };
+    Enums: {
+      [_ in never]: never;
     };
   };
 }
