@@ -42,8 +42,8 @@ export async function POST(request: NextRequest) {
           const supabase = createAdminClient();
 
           // Update tool to featured
-          await supabase
-            .from('tools')
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          await (supabase.from('tools') as any)
             .update({
               is_featured: true,
               is_verified: true,
@@ -52,7 +52,8 @@ export async function POST(request: NextRequest) {
             .eq('id', paymentData.toolId);
 
           // Record the purchase
-          await supabase.from('featured_purchases').insert({
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          await (supabase.from('featured_purchases') as any).insert({
             tool_id: paymentData.toolId,
             stripe_payment_id: paymentData.paymentId,
             amount_cents: paymentData.amountCents,
