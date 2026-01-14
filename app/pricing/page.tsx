@@ -132,7 +132,7 @@ export default function PricingPage() {
               </h3>
               <p className="text-surface-600">
                 We offer a 7-day money-back guarantee if you&apos;re not satisfied with the results.
-                Contact us at support@topai.tools for refund requests.
+                Contact us at support@aitoolfindr.co for refund requests.
               </p>
             </div>
 
