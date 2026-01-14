@@ -4,6 +4,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://aitoolfindr.co'),
   title: {
     default: 'AI Tool Findr - Discover the Best AI Tools',
     template: '%s | AI Tool Findr',
@@ -30,21 +31,12 @@ export const metadata: Metadata = {
     title: 'AI Tool Findr - Discover the Best AI Tools',
     description:
       'Explore the most comprehensive directory of AI tools. Find the perfect AI solution for your needs.',
-    images: [
-      {
-        url: '/og-image.svg',
-        width: 1200,
-        height: 630,
-        alt: 'AI Tool Findr - AI Directory',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AI Tool Findr - Discover the Best AI Tools',
     description:
       'Explore the most comprehensive directory of AI tools. Find the perfect AI solution for your needs.',
-    images: ['/og-image.svg'],
   },
   robots: {
     index: true,
