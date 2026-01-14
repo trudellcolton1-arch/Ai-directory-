@@ -31,7 +31,7 @@ export default async function HomePage() {
           </p>
 
           {/* Hero Search Bar */}
-          <SearchHero placeholder="Search 157+ AI tools..." />
+          <SearchHero placeholder="Search 184+ AI tools..." />
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <Link href="/search" className="btn-secondary text-base py-3 px-6">
