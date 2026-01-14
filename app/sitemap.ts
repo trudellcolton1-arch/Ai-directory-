@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { createServerSupabaseClient } from '@/lib/supabase';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://topai.tools';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://aitoolfindr.co';
   const supabase = await createServerSupabaseClient();
 
   // Get all approved tools

@@ -30,7 +30,7 @@ export function Header() {
               <Sparkles className="w-5 h-5 text-white" />
             </div>
             <span className="font-display font-bold text-xl text-surface-950 hidden sm:block">
-              TopAI<span className="text-brand-500">.tools</span>
+              AI Tool<span className="text-brand-500"> Findr</span>
             </span>
           </Link>
 

@@ -13,7 +13,7 @@ export function Footer() {
                 <Sparkles className="w-4 h-4 text-white" />
               </div>
               <span className="font-display font-bold text-lg text-surface-950">
-                TopAI<span className="text-brand-500">.tools</span>
+                AI Tool<span className="text-brand-500"> Findr</span>
               </span>
             </Link>
             <p className="text-surface-600 text-sm leading-relaxed mb-4">
@@ -38,7 +38,7 @@ export function Footer() {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="mailto:hello@topai.tools"
+                href="mailto:hello@aitoolfindr.co"
                 className="p-2 hover:bg-surface-200 rounded-lg transition-colors text-surface-600 hover:text-surface-900"
               >
                 <Mail className="w-5 h-5" />
@@ -131,7 +131,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-surface-200/50 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-surface-500">
-            © {new Date().getFullYear()} TopAI.tools. All rights reserved.
+            © {new Date().getFullYear()} AI Tool Findr. All rights reserved.
           </p>
           <p className="text-sm text-surface-500">
             Made with 💚 for the AI community

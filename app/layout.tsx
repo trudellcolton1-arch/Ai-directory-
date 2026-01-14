@@ -5,8 +5,8 @@ import { Footer } from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
   title: {
-    default: 'TopAI.tools - Discover the Best AI Tools',
-    template: '%s | TopAI.tools',
+    default: 'AI Tool Findr - Discover the Best AI Tools',
+    template: '%s | AI Tool Findr',
   },
   description:
     'Explore the most comprehensive directory of AI tools. Find the perfect AI solution for writing, image generation, coding, productivity, and more.',
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     'ChatGPT alternatives',
     'AI productivity',
   ],
-  authors: [{ name: 'TopAI.tools' }],
-  creator: 'TopAI.tools',
+  authors: [{ name: 'AI Tool Findr' }],
+  creator: 'AI Tool Findr',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://topai.tools',
-    siteName: 'TopAI.tools',
-    title: 'TopAI.tools - Discover the Best AI Tools',
+    url: 'https://aitoolfindr.co',
+    siteName: 'AI Tool Findr',
+    title: 'AI Tool Findr - Discover the Best AI Tools',
     description:
       'Explore the most comprehensive directory of AI tools. Find the perfect AI solution for your needs.',
     images: [
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'TopAI.tools - AI Directory',
+        alt: 'AI Tool Findr - AI Directory',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TopAI.tools - Discover the Best AI Tools',
+    title: 'AI Tool Findr - Discover the Best AI Tools',
     description:
       'Explore the most comprehensive directory of AI tools. Find the perfect AI solution for your needs.',
     images: ['/og-image.png'],
