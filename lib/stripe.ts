@@ -1,5 +1,5 @@
 import Stripe from 'stripe';
-import { loadStripe } from '@stripe/stripe-js';
+import { loadStripe, type Stripe as StripeClient } from '@stripe/stripe-js';
 
 // Server-side Stripe client
 export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -8,7 +8,7 @@ export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 });
 
 // Client-side Stripe promise
-let stripePromise: Promise<Stripe | null> | null = null;
+let stripePromise: Promise<StripeClient | null> | null = null;
 
 export const getStripe = () => {
   if (!stripePromise) {
