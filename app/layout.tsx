@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       'Explore the most comprehensive directory of AI tools. Find the perfect AI solution for your needs.',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.svg',
         width: 1200,
         height: 630,
         alt: 'AI Tool Findr - AI Directory',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: 'AI Tool Findr - Discover the Best AI Tools',
     description:
       'Explore the most comprehensive directory of AI tools. Find the perfect AI solution for your needs.',
-    images: ['/og-image.png'],
+    images: ['/og-image.svg'],
   },
   robots: {
     index: true,
@@ -70,10 +70,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.svg" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#0a0a0a" />
+        <meta name="theme-color" content="#8B5CF6" />
       </head>
       <body className="min-h-screen flex flex-col">
         <Header />
