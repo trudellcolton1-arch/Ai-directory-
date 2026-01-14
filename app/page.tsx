@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Sparkles, ArrowRight, TrendingUp } from 'lucide-react';
 import { getFeaturedTools, getRecentTools, getCategoriesWithCounts, getToolStats } from '@/lib/data';
 import { ToolCard } from '@/components/ui/ToolCard';
+import { SearchHero } from '@/components/ui/SearchHero';
 import { formatNumber, getCategoryIcon } from '@/lib/utils';
 
 export default async function HomePage() {
@@ -25,15 +26,19 @@ export default async function HomePage() {
             Discover the Best{' '}
             <span className="text-brand-500">AI Tools</span>
           </h1>
-          <p className="text-lg md:text-xl text-surface-600 mb-8">
+          <p className="text-lg md:text-xl text-surface-600 mb-10">
             Explore the most comprehensive directory of AI tools. Find the perfect solution for writing, image generation, coding, productivity, and more.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/search" className="btn-primary text-base py-3 px-6">
+
+          {/* Hero Search Bar */}
+          <SearchHero placeholder="Search 157+ AI tools..." />
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+            <Link href="/search" className="btn-secondary text-base py-3 px-6">
               Browse All Tools
               <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link href="/submit" className="btn-secondary text-base py-3 px-6">
+            <Link href="/submit" className="btn-ghost text-base py-3 px-6">
               Submit Your Tool
             </Link>
           </div>
