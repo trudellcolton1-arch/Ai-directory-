@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Sparkles, Twitter, Github, Mail } from 'lucide-react';
+import { Twitter, Github, Mail } from 'lucide-react';
+import { LogoIcon } from '@/components/ui/LogoIcon';
 
 export function Footer() {
   return (
@@ -10,7 +11,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-white" />
+                <LogoIcon className="w-4 h-4 text-white" />
               </div>
               <span className="font-display font-bold text-lg text-surface-950">
                 AI Tool<span className="text-brand-500"> Findr</span>

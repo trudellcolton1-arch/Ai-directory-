@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Search, Menu, X, Sparkles, Plus } from 'lucide-react';
+import { Search, Menu, X, Plus } from 'lucide-react';
+import { LogoIcon } from '@/components/ui/LogoIcon';
 import { useRouter } from 'next/navigation';
 
 export function Header() {
@@ -27,7 +28,7 @@ export function Header() {
             className="flex items-center gap-2 shrink-0 group"
           >
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center shadow-lg shadow-brand-500/25 group-hover:shadow-brand-500/40 transition-shadow">
-              <Sparkles className="w-5 h-5 text-white" />
+              <LogoIcon className="w-5 h-5 text-white" />
             </div>
             <span className="font-display font-bold text-xl text-surface-950 hidden sm:block">
               AI Tool<span className="text-brand-500"> Findr</span>

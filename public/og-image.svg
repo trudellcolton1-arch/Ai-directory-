@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="ogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A"/>
+      <stop offset="100%" style="stop-color:#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="ogAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6"/>
+      <stop offset="100%" style="stop-color:#6366F1"/>
+    </linearGradient>
+    <filter id="ogGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="200" fill="#8B5CF6" opacity="0.1"/>
+  <circle cx="1100" cy="530" r="250" fill="#6366F1" opacity="0.1"/>
+  <circle cx="900" cy="100" r="150" fill="#A78BFA" opacity="0.08"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.05" stroke="white" stroke-width="1">
+    <line x1="0" y1="157" x2="1200" y2="157"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="473" x2="1200" y2="473"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+  </g>
+
+  <!-- Logo Icon -->
+  <g transform="translate(100, 200)" filter="url(#ogGlow)">
+    <rect width="230" height="230" rx="50" fill="url(#ogAccent)"/>
+    <g transform="translate(45, 45)">
+      <circle cx="60" cy="60" r="42" stroke="white" stroke-width="12" fill="none"/>
+      <line x1="92" y1="92" x2="130" y2="130" stroke="white" stroke-width="12" stroke-linecap="round"/>
+      <path d="M60 30 L67 50 L87 57 L67 64 L60 84 L53 64 L33 57 L53 50 Z" fill="white"/>
+    </g>
+  </g>
+
+  <!-- Text -->
+  <text x="380" y="290" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="72" fill="white">
+    AI Tool Findr
+  </text>
+  <text x="380" y="370" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-weight="400" font-size="32" fill="#A1A1AA">
+    Discover the Best AI Tools
+  </text>
+
+  <!-- Feature badges -->
+  <g transform="translate(380, 420)">
+    <rect width="140" height="45" rx="22" fill="white" opacity="0.1"/>
+    <text x="70" y="30" font-family="system-ui" font-size="16" fill="white" text-anchor="middle">157+ Tools</text>
+  </g>
+  <g transform="translate(540, 420)">
+    <rect width="160" height="45" rx="22" fill="white" opacity="0.1"/>
+    <text x="80" y="30" font-family="system-ui" font-size="16" fill="white" text-anchor="middle">9 Categories</text>
+  </g>
+  <g transform="translate(720, 420)">
+    <rect width="140" height="45" rx="22" fill="white" opacity="0.1"/>
+    <text x="70" y="30" font-family="system-ui" font-size="16" fill="white" text-anchor="middle">Updated Daily</text>
+  </g>
+
+  <!-- URL -->
+  <text x="380" y="540" font-family="system-ui" font-weight="500" font-size="24" fill="#8B5CF6">
+    aitoolfindr.co
+  </text>
+</svg>
