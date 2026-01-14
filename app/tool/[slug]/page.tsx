@@ -3,18 +3,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import {
-  ExternalLink,
   ArrowLeft,
   Star,
   BadgeCheck,
-  Globe,
   Tag,
   Calendar,
-  TrendingUp,
-  Share2,
 } from 'lucide-react';
-import { getToolBySlug, getRelatedTools, recordClick } from '@/lib/data';
+import { getToolBySlug, getRelatedTools } from '@/lib/data';
 import { ToolCard } from '@/components/ui/ToolCard';
+import { VisitButton } from '@/components/ui/VisitButton';
+import { ShareButton } from '@/components/ui/ShareButton';
 import { cn, getPricingColor, formatDate, formatNumber, absoluteUrl } from '@/lib/utils';
 
 interface ToolPageProps {
@@ -178,24 +176,7 @@ export default async function ToolPage({ params }: ToolPageProps) {
           <div className="space-y-6">
             {/* CTA Card */}
             <div className="card p-6 sticky top-24">
-              <a
-                href={visitUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary w-full justify-center text-base py-4 mb-4"
-                onClick={() => {
-                  // Track click via API
-                  fetch('/api/clicks', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ toolId: tool.id }),
-                  });
-                }}
-              >
-                <Globe className="w-5 h-5" />
-                Visit Website
-                <ExternalLink className="w-4 h-4" />
-              </a>
+              <VisitButton href={visitUrl} toolId={tool.id} />
 
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4 pt-4 border-t border-surface-200">
@@ -238,23 +219,7 @@ export default async function ToolPage({ params }: ToolPageProps) {
 
               {/* Share */}
               <div className="pt-4 mt-4 border-t border-surface-200">
-                <button
-                  className="btn-secondary w-full justify-center"
-                  onClick={() => {
-                    if (navigator.share) {
-                      navigator.share({
-                        title: tool.name,
-                        text: tool.tagline,
-                        url: window.location.href,
-                      });
-                    } else {
-                      navigator.clipboard.writeText(window.location.href);
-                    }
-                  }}
-                >
-                  <Share2 className="w-4 h-4" />
-                  Share
-                </button>
+                <ShareButton title={tool.name} text={tool.tagline} />
               </div>
             </div>
           </div>
