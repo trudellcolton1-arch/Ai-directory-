@@ -64,6 +64,19 @@ export function Footer() {
                 { name: 'Design', slug: 'design' },
                 { name: 'Business', slug: 'business' },
                 { name: 'Education', slug: 'education' },
+                { name: 'Healthcare', slug: 'healthcare' },
+                { name: 'Legal', slug: 'legal' },
+                { name: 'Real Estate', slug: 'real-estate' },
+                { name: 'HR & Recruiting', slug: 'hr-recruiting' },
+                { name: 'School', slug: 'school' },
+                { name: 'Gaming', slug: 'gaming' },
+                { name: '3D Modeling', slug: '3d-modeling' },
+                { name: 'Translation', slug: 'translation' },
+                { name: 'E-commerce', slug: 'ecommerce' },
+                { name: 'Security', slug: 'security' },
+                { name: 'Automation', slug: 'automation' },
+                { name: 'Lifestyle', slug: 'lifestyle' },
+                { name: 'Research', slug: 'research' },
               ].map((cat) => (
                 <li key={cat.slug}>
                   <Link
