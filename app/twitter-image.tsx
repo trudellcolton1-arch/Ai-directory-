@@ -119,7 +119,7 @@ export default async function Image() {
               fontSize: '20px',
             }}
           >
-            184+ AI Tools
+            1000+ AI Tools
           </div>
           <div
             style={{
@@ -131,7 +131,7 @@ export default async function Image() {
               fontSize: '20px',
             }}
           >
-            9 Categories
+            25 Categories
           </div>
           <div
             style={{
