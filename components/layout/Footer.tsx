@@ -51,18 +51,29 @@ export function Footer() {
           <div>
             <h4 className="font-display font-semibold text-surface-950 mb-4">Categories</h4>
             <ul className="space-y-2">
-              {['Writing', 'Image Generation', 'Video', 'Coding', 'Productivity', 'Marketing'].map(
-                (cat) => (
-                  <li key={cat}>
-                    <Link
-                      href={`/category/${cat.toLowerCase().replace(' ', '-')}`}
-                      className="text-sm text-surface-600 hover:text-brand-500 transition-colors"
-                    >
-                      {cat}
-                    </Link>
-                  </li>
-                )
-              )}
+              {[
+                { name: 'Writing', slug: 'writing' },
+                { name: 'Image Generation', slug: 'image-generation' },
+                { name: 'Video', slug: 'video' },
+                { name: 'Audio', slug: 'audio' },
+                { name: 'Coding', slug: 'coding' },
+                { name: 'Productivity', slug: 'productivity' },
+                { name: 'Marketing', slug: 'marketing' },
+                { name: 'Data & Analytics', slug: 'data' },
+                { name: 'Chatbots', slug: 'chatbots' },
+                { name: 'Design', slug: 'design' },
+                { name: 'Business', slug: 'business' },
+                { name: 'Education', slug: 'education' },
+              ].map((cat) => (
+                <li key={cat.slug}>
+                  <Link
+                    href={`/category/${cat.slug}`}
+                    className="text-sm text-surface-600 hover:text-brand-500 transition-colors"
+                  >
+                    {cat.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
