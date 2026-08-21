@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { createServerSupabaseClient } from '@/lib/supabase';
+import { listHqPages } from '@/lib/hqContent';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://aitoolfindr.co';
@@ -30,6 +31,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.9,
   }));
 
+  // HQ-written SEO articles for this domain (read-only; empty on DB hiccup).
+  const hqPages = await listHqPages();
+  const articleUrls = hqPages.map((page) => ({
+    url: `${baseUrl}/p/${page.slug}`,
+    lastModified: page.publishedAt ? new Date(page.publishedAt) : new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }));
+
   return [
     {
       url: baseUrl,
@@ -57,5 +67,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     ...categoryUrls,
     ...toolUrls,
+    ...articleUrls,
   ];
 }
