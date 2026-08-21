@@ -24,9 +24,10 @@ export async function generateMetadata({ params }: ToolPageProps): Promise<Metad
   const tool = await getToolBySlug(slug);
 
   if (!tool) {
-    return {
-      title: 'Tool Not Found',
-    };
+    // Throw in metadata (not just the page body) so the 404 status is set
+    // before any streaming starts — a Suspense/loading boundary above this
+    // route would otherwise flush a 200 shell and turn this into a soft 404.
+    notFound();
   }
 
   return {

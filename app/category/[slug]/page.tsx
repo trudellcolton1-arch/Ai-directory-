@@ -16,9 +16,10 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   const category = await getCategoryBySlug(slug);
 
   if (!category) {
-    return {
-      title: 'Category Not Found',
-    };
+    // Throw in metadata (not just the page body) so the 404 status is set
+    // before any streaming starts — a Suspense/loading boundary above this
+    // route would otherwise flush a 200 shell and turn this into a soft 404.
+    notFound();
   }
 
   return {
